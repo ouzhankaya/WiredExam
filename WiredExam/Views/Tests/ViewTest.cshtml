@@ -1,0 +1,222 @@
+﻿@using WiredExamDomain.Models
+@model Exam
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<questions> questonList = new List<questions>();
+    foreach (var item in Model.quetions)
+    {
+        questonList.Add(new questions()
+        {
+            aoption = item.aoption,
+            boption = item.boption,
+            coption = item.coption,
+            doption = item.doption,
+            trueoption = item.trueoption,
+            contextQuestion = item.contextQuestion,
+            examId = item.examId,
+            questionId = item.questionId,
+            order = item.order
+        });
+    }
+}
+<div class="container">
+    <div class="panel panel-default">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12" style="text-align:center;">
+                    <h1>@Model.title</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="text-align:center;">
+                    <h2>@Model.description</h2>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-12" style="text-align:center;">
+                                <span><b>1)</b></span><span>@Html.Raw(Model.quetions[0].contextQuestion.ToString())</span>
+                            </div>
+                            <div class="col-md-9 col-md-offset-3">
+                                <form id="option1">
+                                    <div class="optionSpace">
+                                        <input class="glyp" type="radio" name="option1" value="A" id="option1a"><label class="btn btn-default btn-group-lg" for="option1a" id="label1A">@Html.Raw(Model.quetions[0].aoption.ToString())</label>
+                                    </div>
+                                    <div class="optionSpace">
+                                        <input class="glyp" type="radio" name="option1" value="B" id="option1b"><label class="btn btn-default btn-group-lg" for="option1b" id="label1B">@Html.Raw(Model.quetions[0].boption.ToString())</label>
+                                    </div>
+                                    <div class="optionSpace">
+                                        <input class="glyp" type="radio" name="option1" value="C" id="option1c"><label class="btn btn-default btn-group-lg" for="option1c" id="label1C">@Html.Raw(Model.quetions[0].boption.ToString())</label>
+                                    </div>
+                                    <div class="optionSpace">
+                                        <input class="glyp" type="radio" name="option1" value="D" id="option1d"><label class="btn btn-default btn-group-lg" for="option1d" id="label1D">@Html.Raw(Model.quetions[0].doption.ToString())</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" style="text-align:center;">
+                                <span><b>2)</b></span><span>@Html.Raw(Model.quetions[1].contextQuestion.ToString())</span>
+                            </div>
+                            <div class="col-md-9 col-md-offset-3">
+                                <form id="option2">
+                                    <div class="optionSpace">
+                                        <input class="glyp" type="radio" name="option2" value="A" id="option2a"><label class="btn btn-default btn-group-lg" for="option2a" id="label2A">@Html.Raw(Model.quetions[1].aoption.ToString())</label>
+                                    </div>
+                                    <div class="optionSpace">
+                                        <input class="glyp" type="radio" name="option2" value="B" id="option2b"><label class="btn btn-default btn-group-lg" for="option2b" id="label2B">@Html.Raw(Model.quetions[1].boption.ToString())</label>
+                                    </div>
+                                    <div class="optionSpace">
+                                        <input class="glyp" type="radio" name="option2" value="C" id="option2c "><label class="btn btn-default btn-group-lg" for="option2c" id="label2C">@Html.Raw(Model.quetions[1].coption.ToString())</label>
+                                    </div>
+                                    <div class="optionSpace">
+                                        <input class="glyp" type="radio" name="option2" value="D" id="option2d"><label class="btn btn-default btn-group-lg" for="option2d" id="label2D">@Html.Raw(Model.quetions[1].doption.ToString())</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 col-sm-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+                                <div class="row">
+                                    <div class="col-md-12" style="text-align:center;">
+                                        <span><b>3)</b></span><span>@Html.Raw(Model.quetions[2].contextQuestion.ToString())</span>
+                                    </div>
+                                    <div class="col-md-9 col-md-offset-3">
+                                        <form id="option3">
+                                            <div class="optionSpace">
+                                                <input class="glyp" type="radio" name="option3" value="A" id="option3a"><label class="btn btn-default btn-group-lg" for="option3a" id="label3A">@Html.Raw(Model.quetions[2].aoption.ToString())</label>
+                                            </div>
+                                            <div class="optionSpace">
+                                                <input class="glyp" type="radio" name="option3" value="B" id="option3b"><label class="btn btn-default btn-group-lg" for="option3b" id="label3B">@Html.Raw(Model.quetions[2].boption.ToString())</label>
+                                            </div>
+                                            <div class="optionSpace">
+                                                <input class="glyp" type="radio" name="option3" value="C" id="option3c"><label class="btn btn-default btn-group-lg" for="option3c" id="label3C">@Html.Raw(Model.quetions[2].coption.ToString())</label>
+                                            </div>
+                                            <div class="optionSpace">
+                                                <input class="glyp" type="radio" name="option3" value="D" id="option3d"><label class="btn btn-default btn-group-lg" for="option3d" id="label4D">@Html.Raw(Model.quetions[2].doption.ToString())</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12" style="text-align:center;">
+                                        <span><b>4)</b></span><span>@Html.Raw(Model.quetions[3].contextQuestion.ToString())</span>
+                                    </div>
+                                    <div class="col-md-9 col-md-offset-3">
+                                        <form id="option4">
+                                            <div class="optionSpace">
+                                                <input class="glyp" type="radio" name="option4" value="A" id="option4a"><label class="btn btn-default btn-group-lg" for="option4a" id="label4A">@Html.Raw(Model.quetions[3].aoption.ToString())</label>
+                                            </div>
+                                            <div class="optionSpace">
+                                                <input class="glyp" type="radio" name="option4" value="B" id="option4b"><label class="btn btn-default btn-group-lg" for="option4b" id="label4B">@Html.Raw(Model.quetions[3].boption.ToString())</label>
+                                            </div>
+                                            <div class="optionSpace">
+                                                <input class="glyp" type="radio" name="option4" value="C" id="option4c"><label class="btn btn-default btn-group-lg" for="option4c" id="label4C">@Html.Raw(Model.quetions[3].coption.ToString())</label>
+                                            </div>
+                                            <div class="optionSpace">
+                                                <input class="glyp" type="radio" name="option4" value="D" id="option4d"><label class="btn btn-default btn-group-lg" for="option4d" id="label4D">@Html.Raw(Model.quetions[3].doption.ToString())</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-info btn-lg  sinaviTamamla">Sınavı Tamamla</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.sinaviTamamla').click(function () {
+            //answer
+            var firstanswer = $('input[name=option1]:checked').val();
+            var secondanswer = $('input[name=option2]:checked').val();
+            var thirdanswer = $('input[name=option3]:checked').val();
+            var fourthanswer = $('input[name=option4]:checked').val();
+            var model = @Html.Raw(Json.Encode(questonList));
+            $.each(model,function(i,j){
+                if(j.order=='1'){
+
+                    //doğru cevap
+                    var trueOp="label1"+j.trueoption;
+                    //senin seçimin
+                    var selected="label1"+firstanswer;
+
+                    if(j.trueoption==firstanswer){
+                        $("#"+trueOp).css({"background-color":"green"});
+                    }
+                    else{
+                        $("#"+trueOp).css({"background-color":"green"});
+                        //senin cevabın
+                        $("#"+selected).css({"background-color":"red"});
+                    }
+                }
+                else if(j.order=='2'){
+
+                    //doğru cevap
+                    var trueOp="label2"+j.trueoption;
+                    //senin seçimin
+                    var selected="label2"+secondanswer;
+
+                    if(j.trueoption==secondanswer){
+                        $("#"+trueOp).css({"background-color":"green"});
+                    }
+                    else{
+                        $("#"+trueOp).css({"background-color":"green"});
+                        //senin cevabın
+                        $("#"+selected).css({"background-color":"red"});
+                    }
+                }
+                else if(j.order=='3')
+                {
+
+                    //doğru cevap
+                    var trueOp="label3"+j.trueoption;
+                    //senin seçimin
+                    var selected="label3"+thirdanswer;
+
+                    if(j.trueoption==thirdanswer){
+                        $("#"+trueOp).css({"background-color":"green"});
+                    }
+                    else{
+                        $("#"+trueOp).css({"background-color":"green"});
+                        //senin cevabın
+                        $("#"+selected).css({"background-color":"red"});
+                    }
+                }
+                else if(j.order=='4'){
+
+                    //doğru cevap
+                    var trueOp="label4"+j.trueoption;
+                    //senin seçimin
+                    var selected="label4"+fourthanswer;
+
+                    if(j.trueoption==fourthanswer){
+                        $("#"+trueOp).css({"background-color":"green"});
+                    }
+                    else{
+                        $("#"+trueOp).css({"background-color":"green"});
+                        //senin cevabın
+                        $("#"+selected).css({"background-color":"red"});
+                    }
+                }
+            });
+
+            $('.glyp').attr("disabled", true);
+        });
+    });
+
+</script>

@@ -1,0 +1,14 @@
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\obj\Debug\WiredExamServices.csprojResolveAssemblyReference.cache
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\WiredExamServices.dll.config
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\WiredExamServices.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\WiredExamServices.pdb
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\EntityFramework.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\WiredExamDomain.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\WiredExamDomain.pdb
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\EntityFramework.xml
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\obj\Debug\WiredExamServices.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\obj\Debug\WiredExamServices.pdb
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\Newtonsoft.Json.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamServices\bin\Debug\Newtonsoft.Json.xml

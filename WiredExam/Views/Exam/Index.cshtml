@@ -1,0 +1,138 @@
+﻿@using WiredExamDomain.Models
+@model Exam
+@{
+    ViewBag.Title = "Exam";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var selectedDescription = Model.articles.Where(x => x.title == Model.articles.First().title).FirstOrDefault().description;
+    var userId = Model.userId;
+}
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <label for="comment">Title</label>
+            <select name="listboxTitle" class="listboxTitle"  style="max-width:100% !important">
+                @foreach (var item in Model.articles)
+            {
+                    <option value="@item.articlesId">
+                        @item.title
+                    </option>
+                }
+            </select>
+            <br />
+            <form>
+                <div class="form-group">
+                    <label for="comment">Description</label>
+                    <textarea class="form-control listboxDescription" id="comment" rows="3" disabled style="max-width:100% !important">
+                        @selectedDescription
+                    </textarea>
+                </div>
+            </form>
+        </div>
+        <div class="panel-body">
+            @for (int i = 1; i <= 4; i++)
+            {
+                <form class="questionContent">
+                    <div class="form-group question">
+                        <label for="comment">Soru @i:</label>
+                        <textarea class="form-control textQuestionContent" id="comment"  style="max-width:100% !important"></textarea>
+                    </div>
+                    <div>Secenekler</div>
+                    <div class="form-group questionOpinion">
+                        <div class="col-md-6 ">
+                            <label>A:</label>
+                            <input type="text" class="aopinion"  style="width:100% !important"/>
+                        </div>
+                        <div class="col-md-6 ">
+                            <label>B:</label>
+                            <input type="text" class="bopinion"  style="width:100% !important"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>C:</label>
+                            <input type="text" class="copinion"  style="width:100% !important"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label>D:</label>
+                            <input type="text" class="dopinion"  style="width:100% !important"/>
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="text-center">
+                        <div>Doğru Sık</div>
+                        <select name="answerKey"> 
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                        </select>
+                    </div>
+                </form>
+            }
+            <br />
+            <div class="panel-footer text-center">
+                <button id="sinavOlustur" class="btn btn-primary btn-lg">Sınav Oluştur</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        var model = @Html.Raw(Json.Encode(Model.articles));
+        var parsedModelDescription="";
+        $('select[name=listboxTitle]').on('change', function () {
+            var valueOpinion=parseInt(this.value);
+            $.each(model,function(item,value){
+                if(valueOpinion==value.articlesId){
+                    $("#comment").text(value.description);
+                }
+            });
+        });
+
+        $("#sinavOlustur").click(function(){
+            var questionTitle=$('select[name=listboxTitle] :selected').text().trim();
+            var questionDescription=$('.listboxDescription').text().trim();
+            var userId=@userId;
+            debugger;
+            var quetionsContent=[];
+            var it=1;
+            $.each($(".questionContent"),function(i,value){
+                var question= $(value).find(".textQuestionContent").val();
+                var aopinion=$(value).find(".aopinion").val();
+                var bopinion=$(value).find(".bopinion").val();
+                var copinion=$(value).find(".copinion").val();
+                var dopinion=$(value).find(".dopinion").val();
+                var answerKey=$(value).find('select[name=answerKey] :selected').text().trim();
+                var modelQuestion = { questionId:0, contextQuestion: question, aoption: aopinion, boption: bopinion,coption:copinion,doption:dopinion,trueoption:answerKey,order:it};
+                it++;
+                quetionsContent.push(modelQuestion);
+            });
+            var ExamModel={UserId:userId,title:questionTitle,description:questionDescription,quetions:quetionsContent};
+            $.ajax({
+                url: "/Exam/Exam",
+                type: "POST",
+                data: JSON.stringify(ExamModel),
+                contentType: "application/json",
+                success: function (result) {
+                    alert("Başarıyla Eklendi");
+                    location.reload();
+                },
+                error: function (request, error) {
+                    console.log(arguments);
+                    alert(" Can't do because: " + error);
+                }
+            });
+        }); 
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+

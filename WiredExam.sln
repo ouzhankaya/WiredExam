@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredExam", "WiredExam\WiredExam.csproj", "{723E40DE-50F4-4EE2-B7BD-C02A73754902}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{9BEE40CF-DD65-45B8-8CCC-9FCA29A7BFB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{35CAD48D-7F90-473B-9A5C-CA009E41F1B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterfaces", "UserInterfaces", "{47295658-1818-4CCD-B8AE-94169D337D7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredExamDomain", "WiredExamDomain\WiredExamDomain.csproj", "{B990E861-84FB-48E1-9CFE-71F7D6064AAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiredExamServices", "WiredExamServices\WiredExamServices.csproj", "{09DA5F69-3B6F-402B-A044-3ABECBB88047}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{723E40DE-50F4-4EE2-B7BD-C02A73754902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723E40DE-50F4-4EE2-B7BD-C02A73754902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723E40DE-50F4-4EE2-B7BD-C02A73754902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723E40DE-50F4-4EE2-B7BD-C02A73754902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B990E861-84FB-48E1-9CFE-71F7D6064AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B990E861-84FB-48E1-9CFE-71F7D6064AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B990E861-84FB-48E1-9CFE-71F7D6064AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B990E861-84FB-48E1-9CFE-71F7D6064AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09DA5F69-3B6F-402B-A044-3ABECBB88047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DA5F69-3B6F-402B-A044-3ABECBB88047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DA5F69-3B6F-402B-A044-3ABECBB88047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DA5F69-3B6F-402B-A044-3ABECBB88047}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{723E40DE-50F4-4EE2-B7BD-C02A73754902} = {47295658-1818-4CCD-B8AE-94169D337D7A}
+		{B990E861-84FB-48E1-9CFE-71F7D6064AAC} = {9BEE40CF-DD65-45B8-8CCC-9FCA29A7BFB5}
+		{09DA5F69-3B6F-402B-A044-3ABECBB88047} = {35CAD48D-7F90-473B-9A5C-CA009E41F1B4}
+	EndGlobalSection
+EndGlobal

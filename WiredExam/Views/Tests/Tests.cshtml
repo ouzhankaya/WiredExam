@@ -1,0 +1,47 @@
+﻿@using WiredExamDomain.Models
+@model List<Exam>
+@{
+    ViewBag.Title = "Tests";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>All Tests</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            <label for="id">Başlık</label>
+        </th>
+        <th>
+            <label for="id">Açıklama</label>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+
+            <td>
+                <a href="@Url.Action("ViewTest", "Tests",new { examId=item.examId })" class="btn btn-info btn-xs">
+                    View Test
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                </a>
+                <a href="@Url.Action("Delete", "Exam",new { id=item.examId })" class="btn btn-danger btn-xs">
+                    Sil
+                    <span class="glyphicon glyphicon-trash"></span>
+                </a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+

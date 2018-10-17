@@ -1,0 +1,10 @@
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\bin\Debug\WiredExamDomain.dll.config
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\bin\Debug\WiredExamDomain.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\bin\Debug\WiredExamDomain.pdb
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\bin\Debug\EntityFramework.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\bin\Debug\EntityFramework.xml
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\obj\Debug\WiredExamDomain.dll
+c:\users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\obj\Debug\WiredExamDomain.pdb
+C:\Users\oguzhan\documents\visual studio 2015\Projects\WiredExam\WiredExamDomain\obj\Debug\WiredExamDomain.csprojResolveAssemblyReference.cache

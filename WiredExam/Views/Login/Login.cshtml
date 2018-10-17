@@ -1,0 +1,41 @@
+﻿@model WiredExamDomain.Models.UserProfile
+@{
+    ViewBag.Title = "Login Page";
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/login-register.css" rel="stylesheet" />
+<link href="~/Content/validation-summary.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+
+    <section class="login-info">
+        <div class="container">
+            <div class="row main">
+                <div class="form-header">
+                    <h1 class="text-center ">User Login Form</h1>
+                </div>
+                <div class="main-content">
+                    @Html.ValidationSummary(false)
+                    @Html.HiddenFor(x=>x.userId)
+                    <div class="input-group ">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                        @Html.TextBoxFor(model => model.userName, new { @class = "form-control", placeholder = "Kullanıcı adınız" })
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+                        @Html.TextBoxFor(model => model.password, new { @class = "form-control", placeholder = "Şifreniz", type = "password" })
+                    </div>
+                    <div class="form-group ">
+                        <button type="submit" class="btn btn-danger btn-lg btn-block login-button text-right"><span class="glyphicon glyphicon-log-in"></span> Giriş</button>
+                    </div>
+                </div>
+                @if (ViewBag.ErrorStatus != null && ViewBag.ErrorStatus == "1")
+                {
+                    <div style="color:red;">*Wrong Password or Username</div>
+                }
+            </div>
+        </div>
+    </section>
+}
+
